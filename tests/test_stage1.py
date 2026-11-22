@@ -49,6 +49,15 @@ class Stage1Tests(unittest.TestCase):
         self.assertAlmostEqual(wis, float(run['wis']), places=12)
         self.assertAlmostEqual(naive, float(run['naive']), places=12)
         self.assertAlmostEqual(ess, float(run['ess']), places=9)
+        by_user = {}
+        for row, weight, observed in zip(rows, w, reward):
+            by_user.setdefault(row['task_id'], []).append(weight * (observed-wis))
+        variance_sum = 0.0
+        for residuals in by_user.values():
+            average = math.fsum(residuals)/len(residuals)
+            sample_variance = math.fsum((v-average)**2 for v in residuals)/(len(residuals)-1)
+            variance_sum += len(residuals)*sample_variance
+        self.assertAlmostEqual(math.sqrt(variance_sum)/total, float(run['wis_se']), places=12)
 
     def test_metrics_recomputed_from_all_runs(self):
         rows = records(ROOT/'results/stage1/runs.csv')
