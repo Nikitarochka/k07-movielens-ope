@@ -1,0 +1,33 @@
+{
+  "slice_id": "K07-ML1M-25to34-v1",
+  "source_url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+  "source_sha256": {
+    "archive": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20",
+    "ratings.dat": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+    "users.dat": "1dc3a95300cb19f7c10e027daf29b8cdf1d908dab65b5edfb45950aa389a10a3"
+  },
+  "main_slice": {
+    "age_code": 25,
+    "age_label": "25–34",
+    "minimum_user_ratings": 40,
+    "users": 1696,
+    "rows": 383928,
+    "movies": 3499
+  },
+  "control_slice": {
+    "users": 150,
+    "rows": 3000,
+    "movies": 1295,
+    "movies_per_user": 20
+  },
+  "development_users_within_main_slice": 1546,
+  "selection": "Rank SHA256 ASCII K07:v1:42:user:UserID; take first 150. For each user rank K07:v1:42:movie:UserID:MovieID; take first 20. Break ties by numeric ID. No rating values used for selection.",
+  "source_row_numbering": "1-based line numbers in the original ml-1m/ratings.dat, no header",
+  "output_sha256": {
+    "main_slice.csv": "8e0bb5139c297b4763777eef9367fb66b990858e13e83f4d7d2bc7ddf2198dbc",
+    "control_slice.csv": "5c76cbd36ccbdc07c427811e18ae3f0e583d665fc5b8c64239d8e775ca3811f0",
+    "main_source_rows.txt": "e6d64ccb41fb43ac0e6e504d2d966546103b144a19c249141663023ecf6b8e80",
+    "control_source_rows.txt": "c1727365fc7299f5f2db631987a64564879599fac382c78ff9b095050e805747",
+    "heldout_user_ids.txt": "55919cf27f942cb4c85ae921f3ba73c72224bc923af560256f5abd6b322e57c4"
+  }
+}
