@@ -2,7 +2,9 @@
   "scope": "Stage 1 only: epsilon=0.5",
   "tests_passed": 5,
   "tests_returncode": 0,
-  "tests_output": "test_absent_target_is_undefined_not_zero (test_stage1.Stage1Tests.test_absent_target_is_undefined_not_zero) ... ok\ntest_known_wis_and_full_naive_denominator (test_stage1.Stage1Tests.test_known_wis_and_full_naive_denominator) ... ok\ntest_metrics_recomputed_from_all_runs (test_stage1.Stage1Tests.test_metrics_recomputed_from_all_runs) ... ok\ntest_oracle_without_estimator_or_prepare_tasks (test_stage1.Stage1Tests.test_oracle_without_estimator_or_prepare_tasks) ... ok\ntest_saved_log_independent_formulas (test_stage1.Stage1Tests.test_saved_log_independent_formulas) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.921s\n\nOK\n",
+  "tests_output": "test_absent_target_is_undefined_not_zero (test_stage1.Stage1Tests.test_absent_target_is_undefined_not_zero) ... ok\ntest_known_wis_and_full_naive_denominator (test_stage1.Stage1Tests.test_known_wis_and_full_naive_denominator) ... ok\ntest_metrics_recomputed_from_all_runs (test_stage1.Stage1Tests.test_metrics_recomputed_from_all_runs) ... ok\ntest_oracle_without_estimator_or_prepare_tasks (test_stage1.Stage1Tests.test_oracle_without_estimator_or_prepare_tasks) ... ok\ntest_saved_log_independent_formulas (test_stage1.Stage1Tests.test_saved_log_independent_formulas) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.977s\n\nOK\n",
+  "clean_git_snapshot": "bcf4040fa2290b32c2ef5b01e9a02c74b39995eb",
+  "clean_checkout_offline_run": true,
   "identical_repeated_outputs": [
     "audit_tasks.jsonl",
     "error_cases.csv",
@@ -21,11 +23,11 @@
   },
   "python": "3.12.14",
   "numpy": "2.5.4",
-  "colleagues_card_unchanged": true,
-  "measured_run_seconds": [
-    3.06,
-    2.06
-  ],
-  "source_branch_used_for_protocol": "origin/docs/update_card",
-  "source_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12"
+  "measured_run_seconds": 2.418,
+  "peak_rss_mib": 219.34,
+  "within_600_seconds_and_8_gib": true,
+  "team_protocol_merged": true,
+  "github_math_delimiters_checked": true,
+  "team_protocol_source_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12",
+  "memory_measurement": "Peak sum of RSS for launcher and all child processes; polled every 20 ms."
 }

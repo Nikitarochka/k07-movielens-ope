@@ -130,7 +130,7 @@ def run(config, reward, tasks, output):
                                     'target_probability': 0.2 if action < 5 else 0.0})
             write_csv(output / 'example_log.csv', example)
     write_csv(output / 'runs.csv', rows)
-    with (output / 'audit_tasks.jsonl').open('w', encoding='utf-8') as stream:
+    with (output / 'audit_tasks.jsonl').open('w', encoding='utf-8', newline='\n') as stream:
         for task in tasks:
             stream.write(json.dumps(task, ensure_ascii=False) + '\n')
     bootstrap_rng = np.random.default_rng(20261125)
@@ -163,7 +163,7 @@ def run(config, reward, tasks, output):
                'development_users': 1546, 'events_per_run': users*n,
                'mean_ess': float(np.mean([r['ess'] for r in rows])),
                'metrics': metrics}
-    (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
     return summary
 
 
