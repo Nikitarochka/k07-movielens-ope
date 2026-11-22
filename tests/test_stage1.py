@@ -89,6 +89,21 @@ class Stage1Tests(unittest.TestCase):
         tasks = [json.loads(line) for line in (ROOT/'results/stage1/audit_tasks.jsonl').read_text().splitlines()]
         self.assertEqual(len(tasks), 150)
         self.assertEqual(len({t['user_id'] for t in tasks}), 150)
+        lookup = {int(r['source_row']): r for r in control}
+        self.assertEqual(len(lookup), 3000)
+        seen = set()
+        for task in tasks:
+            self.assertEqual(len(task['source_rows']), 20)
+            self.assertEqual(task['target_action_indices'], list(range(5)))
+            self.assertEqual(task['popular_action_indices'], list(range(15, 20)))
+            mapped = [lookup[i] for i in task['source_rows']]
+            self.assertTrue(all(int(r['UserID']) == task['user_id'] for r in mapped))
+            target_value = sum(int(r['Rating']) >= 4 for r in mapped[:5])/5
+            self.assertEqual(target_value, task['target_value'])
+            seen.update(task['source_rows'])
+        self.assertEqual(seen, set(lookup))
+        self.assertEqual((ROOT/'data/slice_manifest.json').read_bytes(),
+                         (ROOT/'scripts/slice_manifest.json').read_bytes())
 
 
 if __name__ == '__main__':

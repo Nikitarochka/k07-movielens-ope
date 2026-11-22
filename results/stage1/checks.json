@@ -2,7 +2,6 @@
   "scope": "Stage 1 only, epsilon=0.5",
   "tests_passed": 5,
   "tests_output": "test_absent_target_is_undefined_not_zero (test_stage1.Stage1Tests.test_absent_target_is_undefined_not_zero) ... ok\ntest_known_wis_and_full_naive_denominator (test_stage1.Stage1Tests.test_known_wis_and_full_naive_denominator) ... ok\ntest_metrics_recomputed_from_all_runs (test_stage1.Stage1Tests.test_metrics_recomputed_from_all_runs) ... ok\ntest_oracle_without_estimator_or_prepare_tasks (test_stage1.Stage1Tests.test_oracle_without_estimator_or_prepare_tasks) ... ok\ntest_saved_log_independent_formulas (test_stage1.Stage1Tests.test_saved_log_independent_formulas) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.860s\n\nOK\n",
-  "verified_git_snapshot": "71d8548492b3ad6a375b995c584ad131e73223cd",
   "clean_checkout_offline_run": true,
   "identical_to_committed_outputs": [
     "audit_tasks.jsonl",
@@ -26,5 +25,15 @@
   "peak_process_tree_rss_mib": 206.66,
   "within_600_seconds_and_8_gib": true,
   "team_protocol_merged": true,
-  "source_team_protocol_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12"
+  "source_team_protocol_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12",
+  "fresh_github_clone_verified": true,
+  "clean_environment_numpy": "2.5.5",
+  "data_matches_original_october_slice": true,
+  "data_task_mapping_verified": true,
+  "verified_source_sha256": {
+    "stage1.py": "89cdff6500552686d3971809b7bfb5129fd13e06c772922949f121bf3bb28aae",
+    "tests/test_stage1.py": "d580a0b12f9210d0ebeee510b93bcc59f7c27edaea53b31df632ee014ec9e9a6",
+    "configs/stage1.json": "66d9e4546c21e51d7f4c31499a5c86507c9ae00ada34adb2e8392e4c1d7ef05b",
+    "data/slice_manifest.json": "e36f80180cb1afa1a478da1ab47d8f55fc8c875ab7b1c5fd9c81263ccff7d70d"
+  }
 }
