@@ -1,11 +1,10 @@
 {
-  "scope": "Stage 1 only: epsilon=0.5",
+  "scope": "Stage 1 only, epsilon=0.5",
   "tests_passed": 5,
-  "tests_returncode": 0,
-  "tests_output": "test_absent_target_is_undefined_not_zero (test_stage1.Stage1Tests.test_absent_target_is_undefined_not_zero) ... ok\ntest_known_wis_and_full_naive_denominator (test_stage1.Stage1Tests.test_known_wis_and_full_naive_denominator) ... ok\ntest_metrics_recomputed_from_all_runs (test_stage1.Stage1Tests.test_metrics_recomputed_from_all_runs) ... ok\ntest_oracle_without_estimator_or_prepare_tasks (test_stage1.Stage1Tests.test_oracle_without_estimator_or_prepare_tasks) ... ok\ntest_saved_log_independent_formulas (test_stage1.Stage1Tests.test_saved_log_independent_formulas) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.977s\n\nOK\n",
-  "clean_git_snapshot": "bcf4040fa2290b32c2ef5b01e9a02c74b39995eb",
+  "tests_output": "test_absent_target_is_undefined_not_zero (test_stage1.Stage1Tests.test_absent_target_is_undefined_not_zero) ... ok\ntest_known_wis_and_full_naive_denominator (test_stage1.Stage1Tests.test_known_wis_and_full_naive_denominator) ... ok\ntest_metrics_recomputed_from_all_runs (test_stage1.Stage1Tests.test_metrics_recomputed_from_all_runs) ... ok\ntest_oracle_without_estimator_or_prepare_tasks (test_stage1.Stage1Tests.test_oracle_without_estimator_or_prepare_tasks) ... ok\ntest_saved_log_independent_formulas (test_stage1.Stage1Tests.test_saved_log_independent_formulas) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.860s\n\nOK\n",
+  "verified_git_snapshot": "71d8548492b3ad6a375b995c584ad131e73223cd",
   "clean_checkout_offline_run": true,
-  "identical_repeated_outputs": [
+  "identical_to_committed_outputs": [
     "audit_tasks.jsonl",
     "error_cases.csv",
     "example_log.csv",
@@ -14,20 +13,18 @@
     "summary.json"
   ],
   "sha256": {
-    "audit_tasks.jsonl": "fca366a9e45468788b65e854d986c2cf4853537a4009081a5fe16a596faf1dfc",
+    "audit_tasks.jsonl": "cb4e053dc736bf499983d4c9f7de4731b1e2b666a75c4092db577160db73d803",
     "error_cases.csv": "edff6a0a3659cfe1c9e767b1db1eaef5402f96eaf3a6c3ab6529020a1dfa369e",
     "example_log.csv": "d70d5cb21645354f72dff0e944ba4304bd9c130bfdbb4d963ef32b3ca9e586ee",
     "metrics.csv": "b92e28af083f8c85bcd9e56aba453de612318dced45e909c3aaefb326a3240be",
     "runs.csv": "8114e1d162bd65e66af576b66c92dc4774c09ad6c69685cab6d27d01378250a0",
-    "summary.json": "2d4fd2933c9e1e86926d542d568e6ccdec0686f3fe2a66d75fddc0ca485ae5b6"
+    "summary.json": "5c4e6deff0dea8d81c99ac68a69569843a48ba0443bca553a9df2fac8521847b"
   },
   "python": "3.12.14",
   "numpy": "2.5.4",
-  "measured_run_seconds": 2.418,
-  "peak_rss_mib": 219.34,
+  "measured_run_seconds": 2.726,
+  "peak_process_tree_rss_mib": 206.66,
   "within_600_seconds_and_8_gib": true,
   "team_protocol_merged": true,
-  "github_math_delimiters_checked": true,
-  "team_protocol_source_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12",
-  "memory_measurement": "Peak sum of RSS for launcher and all child processes; polled every 20 ms."
+  "source_team_protocol_commit": "06c74b47c0f677a3a176fc13a7b6559ce082fd12"
 }
